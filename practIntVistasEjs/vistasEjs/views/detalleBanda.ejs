@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <title>Bandas Busqueda</title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
+<%- include('./partials/head') %> 
 
 <body>
+  <%- include('./partials/header') %> 
   <h1><%= bandasInfo[0].nombre%></h1>
   <p>Integrantes: <%= bandasInfo[0].integrantes%></p>
   <h3>Genero:</h3>
@@ -20,7 +18,9 @@
     <% } %>
   </ul>
   <img src="../<%=bandasInfo[0].cover%>" alt="cover">
-  <iframe src= <%=bandasInfo[0].video%> frameborder="0"></iframe>
+  <h2>Video presentacion:</h2>
+  <a href= <%=bandasInfo[0].video%>>Click para ver video</a>
+  <%- include('./partials/footer') %> 
 </body>
 
 </html>

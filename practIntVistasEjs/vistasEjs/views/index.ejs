@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <title>Bandas</title>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
+<%- include('./partials/head') %>
 
 <body>
+  <%- include('./partials/header') %> 
   <h1>Todas las bandas</h1>
   <% for(let i = 0; i < bandasInfo.length; i++){ %>
   <a href="/id/<%=bandasInfo[i].id%> ">
@@ -18,6 +16,7 @@
   </ul>
   <img src="../<%=bandasInfo[i].cover%>" alt="cover">
   <% } %>
+  <%- include('./partials/footer') %> 
 </body>
 
 </html>

@@ -6,3 +6,21 @@ body {
 a {
   color: #00B7FF;
 }
+
+h1 {
+  color: red;
+}
+
+h3 {
+  color: coral;
+}
+
+header {
+  background-color: crimson;
+  width: 100%;
+}
+
+footer {
+  background-color: darkblue;
+  width: 100%;
+}
