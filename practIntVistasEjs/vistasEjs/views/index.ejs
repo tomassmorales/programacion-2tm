@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bandas</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Todas las bandas</h1>
+    <% for(let i = 0; i < bandasInfo.length; i++){ %>
+      <a href="/id/<%=bandasInfo[i].id%> "><p><%= bandasInfo[i].nombre%></p> </a>
+      <ul>
+        <li>Genero: <%= bandasInfo[i].genero%></li>
+        <li>Integrantes: <%= bandasInfo[i].integrantes%></li>
+      </ul>
+      <img src= "../<%=bandasInfo[i].cover%>" alt="cover">
+      <% } %>
+  </body>
+</html>

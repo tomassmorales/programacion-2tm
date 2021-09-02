@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bandas Busqueda</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= bandasInfo[0].nombre%></h1>
+    <p>Integrantes: <%= bandasInfo[0].integrantes%></p>
+    <h3>Genero:</h3>
+   <a href="/genero/<%=bandasInfo[0].genero%> "><h3><%= bandasInfo[0].genero%></h3></a>
+    <h3>Canciones mas populares</h3>
+    <ul>
+    <% for(let i = 0; i < bandasInfo[0].topCanciones.length; i++){ %> 
+      <li><%=bandasInfo[0].topCanciones[i]%></li>
+    <% } %> 
+  </ul>
+  <img src= "../<%=bandasInfo[0].cover%>" alt="cover">
+  <iframe src="<%=bandasInfo[0].video%>" frameborder="0"></iframe>
+  </body>
+</html>
