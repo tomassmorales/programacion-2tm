@@ -1,0 +1,19 @@
+<header>
+	<nav>
+		<ul>
+			<li>
+				<a href="/movies">Inicio</a>
+			</li>
+			<% if(user != null){ %>
+				<form action="/users/logout" method="POST">
+				<button>Cerrar Sesión</button>
+				</form>
+				<li>
+					Bienvenido <%= user %> 
+				</li>
+				<img src="/images/avatars/<%= avatar %>" alt="<%= avatar %>">
+				<a href="/users/editarPerfil">Editar Perfil</a>
+			<% }  %> 
+		</ul>
+	</nav>
+</header>

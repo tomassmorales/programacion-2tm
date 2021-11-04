@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <%- include(`partials/header`) %>
+    <form action="/movies/search" method="GET">
+      <label for="">Buscar pelicula</label><input type="text" name="q">
+      <button>Buscar</button>
+    </form>
+    <a href="/movies/new">NEW</a>
+    <a href="/movies/recommended">Recomendadas</a>
+    <button><a href="/movies/create">CREAR PELICULA</a></button>
+    <% for(let i = 0; i < movies.length; i++){%> 
+      <h3><a href="/movies/detail/<%= movies[i].id %> "><%= movies[i].title %> </a></h3>
+    <% } %> 
+  </body>
+</html>

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <% for(let i = 0; i < movies.length; i++){%> 
+      <h3><a href="/movies/detail/<%= movies[i].id %> "><%= movies[i].title %> </a></h3>
+    <% } %> 
+  </body>
+</html>
